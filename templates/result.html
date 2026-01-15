@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Result</title>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; text-align: center; }
+        .thumbnail { max-width: 300px; border-radius: 10px; }
+        .btn { display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; margin: 10px; }
+        .btn-hd { background-color: #28a745; }
+        .ad-container { margin: 20px 0; border: 1px dashed #ccc; padding: 20px; background: #f9f9f9; }
+    </style>
+</head>
+<body>
+    <h1>{{ data.title }}</h1>
+
+    <img src="{{ data.cover }}" alt="Video Cover" class="thumbnail">
+
+    <!-- Google Adsense Placeholder -->
+    <div class="ad-container">
+        <p>Google Adsense Space</p>
+        <!-- Paste your Google Adsense code here -->
+    </div>
+
+    <div>
+        <h3>Download Links:</h3>
+        {% if data.hdplay %}
+            <a href="{{ data.hdplay }}" class="btn btn-hd" target="_blank">Download HD Video</a>
+        {% endif %}
+        {% if data.play %}
+            <a href="{{ data.play }}" class="btn" target="_blank">Download Video</a>
+        {% endif %}
+        {% if data.music %}
+            <a href="{{ data.music }}" class="btn" target="_blank">Download Audio</a>
+        {% endif %}
+    </div>
+
+    <br>
+    <a href="/">Download Another</a>
+</body>
+</html>
