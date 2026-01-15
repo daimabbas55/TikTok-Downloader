@@ -370,3 +370,4 @@ FodyWeavers.xsd
 /src/scripts/old
 /src/ToastNotification.cs
 .gitignore
+downloads/

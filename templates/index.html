@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Downloader</title>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; text-align: center; }
+        input[type="text"] { width: 80%; padding: 10px; margin: 10px 0; }
+        button { padding: 10px 20px; cursor: pointer; }
+        .error { color: red; }
+        .ad-container { margin: 20px 0; border: 1px dashed #ccc; padding: 20px; background: #f9f9f9; }
+    </style>
+</head>
+<body>
+    <h1>TikTok Video Downloader</h1>
+
+    <!-- Google Adsense Placeholder -->
+    <div class="ad-container">
+        <p>Google Adsense Space</p>
+        <!-- Paste your Google Adsense code here -->
+    </div>
+
+    <form method="POST">
+        <input type="text" name="url" placeholder="Paste TikTok URL here..." required>
+        <br>
+        <button type="submit">Download</button>
+    </form>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <!-- Google Adsense Placeholder -->
+    <div class="ad-container">
+        <p>Google Adsense Space</p>
+        <!-- Paste your Google Adsense code here -->
+    </div>
+</body>
+</html>
